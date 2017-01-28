@@ -86,4 +86,4 @@ else
 	echo ""
 fi
 
-
+rm temp.${RANDVAR}.txt
