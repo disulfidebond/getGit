@@ -8,8 +8,8 @@ checkGitOutput() {
 		GITV1=$(cat temp.${RANDVAR}.txt | cut -d':' -f2)
                 GITVP=$(echo $GITV1 | cut -d' ' -f4)
                 if [[ "$GITVP" = "found" ]] ; then
-                	echo "It looks like there was a problem with the name that was $
-                        echo "Or possibly SSH setup.  Please check configuration and re$
+                	echo "It looks like there was a problem with the name that was provided"
+                        echo "Or possibly SSH setup.  Please check configuration and retry"
                         echo "The error was"
                         echo "$GITREMOTE"
                 else
@@ -23,7 +23,7 @@ checkGitOutput() {
                 	echo "It looks like you have already added a repository,"
                         echo "but for some reason, I cannot clone it.  Here is the information that I have"
                         echo "Remote repository is"
-                        GITRV=$(git remote -v | cut -d'@' -f2 | cut -d'(' -f1 | cut -d' ' -f1) ; echo $GITRV | cut -$
+                        GITRV=$(git remote -v | cut -d'@' -f2 | cut -d'(' -f1 | cut -d' ' -f1) ; echo $GITRV
                         echo "I attempted to clone it, but got this failure message"
                         echo "$GITREMOTE"
                 else
